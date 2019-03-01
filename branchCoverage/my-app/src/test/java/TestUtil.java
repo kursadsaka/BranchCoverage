@@ -16,9 +16,17 @@ public class TestUtil {
 	
 	@Test
 	public void lengthIsOne() {
-		
 		assertFalse(c.compute(1));
-		
+	}
+	
+	@Test
+	public void lengthIsEven() {
+		assertFalse(c.compute(1, 1));
+	}
+	
+	@Test
+	public void lengthIsOdd() {
+		assertTrue(c.compute(1, 1, 1));
 	}
 	
 }
