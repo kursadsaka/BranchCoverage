@@ -29,4 +29,19 @@ public class TestUtil {
 		assertTrue(c.compute(1, 1, 1));
 	}
 	
+	@Test
+	public void testRuntimeException() {
+		try{
+			c.compute(0, 1, 1);
+			fail();
+		} catch (RuntimeException e) {
+			
+		}
+	}
+	
+	@Test
+	public void testFalse() {
+		assertFalse(c.compute(3, 5, 9));
+	}
+	
 }
